@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import SmoothScrollProvider from "@/components/SmoothScrollProvider";
+import Navbar from "@/components/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,10 +38,11 @@ export default function RootLayout({
           {/* Film Grain Noise Overlay */}
           <div className="noise-overlay" aria-hidden="true" />
 
+          <Navbar />
+
           {children}
         </SmoothScrollProvider>
       </body>
     </html>
   );
 }
-
